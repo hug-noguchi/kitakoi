@@ -1,0 +1,190 @@
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+RewriteEngine on
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ https://test.kitakoi.info/$1 [R=301,L]
+RewriteEngine on
+RewriteCond %{THE_REQUEST} ^.*/index.php
+RewriteRule ^(.*)index.php$ https://test.kitakoi.info/$1 [R=301,L]
+RewriteEngine on
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ https://www.kitakoi.info/$1 [R=301,L]
+RewriteEngine on
+RewriteCond %{THE_REQUEST} ^.*/index.php
+RewriteRule ^(.*)index.php$ https://www.kitakoi.info/$1 [R=301,L]
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^kitakoi\.info$
+RewriteRule ^(.*)$ http://www.kitakoi.info/$1 [R=301,L]
+
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+Redirect 301 /leisure/leisure-hakodate/ https://www.kitakoi.info/leisure/
+Redirect 301 /leisure/leisure-002/ https://www.kitakoi.info/leisure/
+Redirect 301 /leisure/leisure-004/ https://www.kitakoi.info/leisure/
+
+# カテゴリー
+RewriteRule ^stay/$ category/other/ [L,R=301]
+RewriteRule ^scenery/$ category/other/ [L,R=301]
+RewriteRule ^foods/$ category/other/ [L,R=301]
+RewriteRule ^leisure/$ category/other/ [L,R=301]
+RewriteRule ^shopping/$ category/other/ [L,R=301]
+RewriteRule ^wedding/$ news/ [L,R=301]
+
+# 地域
+RewriteRule ^tiiki/sapporo/$ https://test.kitakoi.info/ [L,R=301]
+RewriteRule ^tiiki/muroran/$ https://test.kitakoi.info/ [L,R=301]
+RewriteRule ^tiiki/hakodate/$ https://test.kitakoi.info/ [L,R=301]
+RewriteRule ^tiiki/tomakomai/$ https://www.kitakoi.info/ [L,R=301]
+
+# 記事
+RewriteRule ^stay/hakodate-hotel-2/$ other/hakodate-hotel/ [L,R=301]
+RewriteRule ^stay/otaru-yado/$ other/otaru-yado/ [L,R=301]
+RewriteRule ^stay/sapporo-omotenashi-yado/$ other/sapporo-yado-2/ [L,R=301]
+RewriteRule ^stay/sapporo-guesthouse/$ other/sapporo-guesthouse/ [L,R=301]
+RewriteRule ^stay/sapporo-winter-stay/$ other/sapporo-yado/ [L,R=301]
+RewriteRule ^stay/sapporo-onsen/$ other/sapporo-onsenyado/ [L,R=301]
+RewriteRule ^stay/sapporo-hotel/$ other/sapporo-hotel/ [L,R=301]
+RewriteRule ^stay/onsenyado/$ other/hokkaido-onsenyado/ [L,R=301]
+RewriteRule ^stay/stay-otaru/$ other/otaru-stay/ [L,R=301]
+RewriteRule ^stay/stay-001/$ other/hokkaido-hotel/ [L,R=301]
+RewriteRule ^stay/century-marina/$ other/centurymarina/ [L,R=301]
+RewriteRule ^scenery/sapporo-nightdrive/$ other/drive/ [L,R=301]
+RewriteRule ^scenery/hakodate-yakei/$ other/ohakodate-nightview-3/ [L,R=301]
+RewriteRule ^scenery/hakodate-yakei-heart/$ other/hakodate-nightview-2/ [L,R=301]
+RewriteRule ^scenery/hakodate-urayakei/$ other/hakodate-drive/ [L,R=301]
+RewriteRule ^scenery/hakodate-yakei-2/$ other/hakodate-nightview/ [L,R=301]
+RewriteRule ^scenery/planetarium/$ other/planetarium/ [L,R=301]
+RewriteRule ^scenery/higaeri-onsen/$ other/hokkaidou-onsen/ [L,R=301]
+RewriteRule ^scenery/scenery-001/$ other/hokkaidou-locationphoto/ [L,R=301]
+RewriteRule ^scenery/farm/$ other/furano_lavenderfield/ [L,R=301]
+RewriteRule ^scenery/幻想的な景色-【白金-青い池】/$ other/hokkaido-bieigawa/ [L,R=301]
+RewriteRule ^foods/sapporo-couplesheet/$ other/sapporo-couplesheet/ [L,R=301]
+RewriteRule ^foods/hakodate-dinner-2/$ other/hakodate-nightview-4/ [L,R=301]
+RewriteRule ^foods/kushiro-koshitsu/$ other/kushiro-date-2/ [L,R=301]
+RewriteRule ^foods/kushiro-date-lunch/$ other/kushiro-lunch/ [L,R=301]
+RewriteRule ^foods/kushiro-izakaya/$ other/kushiro-izakaya/ [L,R=301]
+RewriteRule ^foods/otaru-date-dinner/$ other/otaru-dinner/ [L,R=301]
+RewriteRule ^foods/kushiro-dinner/$ other/kushiro-dinner-2/ [L,R=301]
+RewriteRule ^foods/asahikawa-yakiniku/$ other/asahikawa-yakiniku/ [L,R=301]
+RewriteRule ^foods/kushiro-christmas/$ other/kushiro-dinner/ [L,R=301]
+RewriteRule ^foods/hakodate-dinner/$ other/hakodate-dinner/ [L,R=301]
+RewriteRule ^foods/sapporo-dinner/$ other/sapporo-dinner/ [L,R=301]
+RewriteRule ^foods/hakodate-yakiniku/$ other/hakodate-yakiniku/ [L,R=301]
+RewriteRule ^foods/dinner-muroran/$ other/murorann-dinner/ [L,R=301]
+RewriteRule ^foods/bar/$ other/hokkaidou-bar/ [L,R=301]
+RewriteRule ^foods/omotenashi/$ other/hopkkaido-datespots/ [L,R=301]
+RewriteRule ^foods/foods-001/$ other/sapporo-gourmet/ [L,R=301]
+RewriteRule ^foods/札幌味噌ラーメンの代名詞【すみれ（札幌本店）/$ other/sapporo-misoramen/ [L,R=301]
+RewriteRule ^leisure/asahikawa-ganbanyoku/$ other/asahikawa-ganbanyoku/ [L,R=301]
+RewriteRule ^leisure/hokkaido-date/$ other/hokkaido-datespots/ [L,R=301]
+RewriteRule ^leisure/kushiro-drive/$ other/kushiro-drive/ [L,R=301]
+RewriteRule ^leisure/sapporo-ganbanyoku/$ other/sapporo-ganbanyoku/ [L,R=301]
+RewriteRule ^leisure/otaru-marugoto/$ other/otaru-datespots/ [L,R=301]
+RewriteRule ^leisure/anniversary-date/$ other/hokkaido-anniversary-date/ [L,R=301]
+RewriteRule ^leisure/sapporo-kashikiriburo/$ other/sapporo-kashikiriburo/ [L,R=301]
+RewriteRule ^leisure/tokachi-obihiro-winter/$ other/tokachiobihiro-winter/ [L,R=301]
+RewriteRule ^leisure/otaru-aquarium/$ other/otaru-aquarium/ [L,R=301]
+RewriteRule ^leisure/kushiro-local/$ other/sapporo-drive/ [L,R=301]
+RewriteRule ^leisure/sapporo-drive-date/$ other/kushiro-local-date/ [L,R=301]
+RewriteRule ^leisure/sapporo-winter-date/$ other/sapporo-winter-date/ [L,R=301]
+RewriteRule ^leisure/drive-asahikawa/$ other/asahikawa-drive/ [L,R=301]
+RewriteRule ^leisure/jr/$ other/jr-date/ [L,R=301]
+RewriteRule ^leisure/kigaru-leisure/$ other/hokkaido-leisure/ [L,R=301]
+RewriteRule ^leisure/coordinate/$ other/hohhaido-couple-coordination/ [L,R=301]
+RewriteRule ^leisure/leisure-autumn/$ other/hokkaido-autumn-date/ [L,R=301]
+RewriteRule ^leisure/anaba-001/$ other/hokkaido-date/ [L,R=301]
+RewriteRule ^leisure/leisure-muroran/$ other/murorann-date/ [L,R=301]
+RewriteRule ^leisure/冬だけじゃない！ニセコミルク工房-高橋牧場の魅/$ other/niseko/ [L,R=301]
+RewriteRule ^shopping/ノスタルジックな空間【-小樽オルゴール堂-】/$ other/otaru-musicbox/ [L,R=301]
+RewriteRule ^shopping/通販で買えない？北菓楼（新千歳空港店）のシュ/$ other/hokkaidou_omiyage/ [L,R=301]
+RewriteRule ^shopping/shopping-001/$ other/hokkaidou_omiyage-2/ [L,R=301]
+RewriteRule ^shopping/craft/$ other/hokkaidou_taiken/ [L,R=301]
+RewriteRule ^shopping/shopping-002/$ other/hokkaidou_shopping/ [L,R=301]
+RewriteRule ^wedding/hakodate-bellclassic/$ hakodate_wedding/bellclassic-hakodate/ [L,R=301]
+RewriteRule ^wedding/hakodate-wedding-2/$ hakodate_wedding/wedding-photo-2/ [L,R=301]
+RewriteRule ^wedding/hakodate-wedding/$ hakodate_wedding/wedding-cost-3/ [L,R=301]
+RewriteRule ^wedding/sapporo-wedding-18/$ hakodate_wedding/hakodate-charm/ [L,R=301]
+RewriteRule ^wedding/sapporo-wedding-17/$ sapporo_wedding/wedding-cost-savings/ [L,R=301]
+RewriteRule ^wedding/sapporo-wedding-16/$ sapporo_wedding/wedding-preshoot/ [L,R=301]
+RewriteRule ^wedding/wedding-sapporo-15/$ sapporo_wedding/photowedding/ [L,R=301]
+RewriteRule ^wedding/wedding-sapporo-14/$ sapporo_wedding/wedding-photo-trend/ [L,R=301]
+RewriteRule ^wedding/sapporo-wedding-13/$ sapporo_wedding/wedding-photo-savings/ [L,R=301]
+RewriteRule ^wedding/sapporo-wedding-12/$ sapporo_wedding/weddingdress/ [L,R=301]
+RewriteRule ^wedding/sapporo-wedding-11/$ sapporo_wedding/wedding-photo-basis/ [L,R=301]
+RewriteRule ^wedding/sapporo-wedding-10/$ sapporo_wedding/wedding-preparation/ [L,R=301]
+RewriteRule ^wedding/sapporo-wedding-9/$ sapporo_wedding/reception-venue/ [L,R=301]
+RewriteRule ^wedding/sapporo-wedding-8/$ sapporo_wedding/reception-basic/ [L,R=301]
+RewriteRule ^wedding/murorann-wedding-3/$ muroran_wedding/marriage-meeting/ [L,R=301]
+RewriteRule ^wedding/murorann-wedding-2/$ muroran_wedding/wedding-photo/ [L,R=301]
+RewriteRule ^wedding/murorann-wedding/$ muroran_wedding/artbellange/ [L,R=301]
+RewriteRule ^wedding/murorann-weddinghall/$ muroran_wedding/wedding-hall-2/ [L,R=301]
+RewriteRule ^wedding/sapporo-wedding-7/$ sapporo_wedding/wedding-averagecost/ [L,R=301]
+RewriteRule ^wedding/sapporo-wedding-6/$ sapporo_wedding/small-wedding-cost/ [L,R=301]
+RewriteRule ^wedding/sapporo-wedding-5/$ sapporo_wedding/wedding-cost-2/ [L,R=301]
+RewriteRule ^wedding/sapporo-wedding-4/$ sapporo_wedding/wedding-hall-visit/ [L,R=301]
+RewriteRule ^wedding/sapporo-wedding-3/$ sapporo_wedding/small-wedding-3/ [L,R=301]
+RewriteRule ^wedding/sapporo-weddinghall/$ sapporo_wedding/wedding-hall-ranking/ [L,R=301]
+RewriteRule ^wedding/sapporo-wedding-2/$ sapporo_wedding/wedding-hall/ [L,R=301]
+RewriteRule ^wedding/tomakomai-wedding-6/$ tomakomai_wedding/photo/ [L,R=301]
+RewriteRule ^wedding/tomakomai-wedding-5/$ tomakomai_wedding/chapel/ [L,R=301]
+RewriteRule ^wedding/tomakomai-wedding-4/$ tomakomai_wedding/small-wedding/ [L,R=301]
+RewriteRule ^wedding/tomakomai-wedding-3/$ tomakomai_wedding/bridal-hairstyle/ [L,R=301]
+RewriteRule ^wedding/tomakomai-nijikai/$ tomakomai_wedding/nijikai/ [L,R=301]
+RewriteRule ^wedding/tomakomai-wedding-2/$ tomakomai_wedding/wedding-cost/ [L,R=301]
+RewriteRule ^wedding/tomakomai-wedding/$ tomakomai_wedding/weddingplan/ [L,R=301]
+RewriteRule ^wedding/sapporo-bridalaesthetic-4/$ sapporo_wedding/maternity-bridal-esthetic/ [L,R=301]
+RewriteRule ^wedding/sapporo-bridalshaving/$ sapporo_wedding/bridal-esthetic-shaving/ [L,R=301]
+RewriteRule ^wedding/sapporo-bridalaesthetic-3/$ sapporo_wedding/bridal-esthetic-3/ [L,R=301]
+RewriteRule ^wedding/sapporo-bridalaesthetic-2/$ sapporo_wedding/bridal-esthetic-2/ [L,R=301]
+RewriteRule ^wedding/sapporo-bridalaesthetic/$ sapporo_wedding/bridal-esthetic/ [L,R=301]
+RewriteRule ^wedding/sapporo-bridalnail-2/$ sapporo_wedding/bridal-nailchip/ [L,R=301]
+RewriteRule ^wedding/sapporo-bridalnail/$ sapporo_wedding/bridalnail/ [L,R=301]
+RewriteRule ^wedding/sapporo-propose/$ sapporo_wedding/propose-datespot/ [L,R=301]
+RewriteRule ^wedding/sapporo-bridalnailsalon/$ sapporo_wedding/bridal-nailsalon/ [L,R=301]
+RewriteRule ^wedding/sapporo-bridalphoto/$ sapporo_wedding/photostudio/ [L,R=301]
+RewriteRule ^wedding/sapporo-gardenbridal/$ sapporo_wedding/gardenwedding/ [L,R=301]
+RewriteRule ^wedding/hokkaido-hotel-bridal/$ other/hokkaidou-hotelbridal/ [L,R=301]
+RewriteRule ^wedding/garden-wedding/$ other/hokkaidou-gardenwedding/ [L,R=301]
+RewriteRule ^wedding/kaihisei/$ other/hokkaidou-kaihisei/ [L,R=301]
+RewriteRule ^wedding/wedding-002/$ other/homecoming-marriage/ [L,R=301]
+RewriteRule ^wedding/wedding-001/$ sapporo_wedding/hokkaido-locationphoto/ [L,R=301]
+RewriteRule ^wedding/gothicstyle/$ hakodate_wedding/gothicstyle/ [L,R=301]
+
+# 230830
+RewriteRule ^foods/parfait/$ https://www.kitakoi.info/ [L,R=301]
+RewriteRule ^foods/tabiji/$ https://www.kitakoi.info/ [L,R=301]
+RewriteRule ^tiiki/kushiro$ https://www.kitakoi.info/ [L,R=301]
+RewriteRule ^tiiki/kushiro/$ https://www.kitakoi.info/ [L,R=301]
+RewriteRule ^tiiki/otaru/$ https://www.kitakoi.info/ [L,R=301]
+RewriteRule ^scenery/hakodate-yakei/$ https://www.kitakoi.info/ [L,R=301]
+RewriteRule ^tiiki/otaru$ https://www.kitakoi.info/ [L,R=301]
+RewriteRule ^wedding/ゴシックスタイルの教会【カトリック元町教会】/$ https://www.kitakoi.info/ [L,R=301]
+RewriteRule ^wedding/hokkaido-bridal/$ https://www.kitakoi.info/ [L,R=301]
+RewriteRule ^stay/2haku3ka/$ https://www.kitakoi.info/ [L,R=301]
+RewriteRule ^post$ https://www.kitakoi.info/ [L,R=301]
+RewriteRule ^leisure/page/1/$ https://www.kitakoi.info/ [L,R=301]
+RewriteRule ^wedding/page/1/$ https://www.kitakoi.info/ [L,R=301]
+RewriteRule ^scenery/sapporo-nightdrive/すすきの地区内に5店舗展開$ https://www.kitakoi.info/ [L,R=301]
+RewriteRule ^tiiki/tomakomai$ https://www.kitakoi.info/ [L,R=301]
+RewriteRule ^foods/page/1/$ https://www.kitakoi.info/ [L,R=301]
+RewriteRule ^foods$ https://www.kitakoi.info/ [L,R=301]
+RewriteRule ^scenery/page/1/$ https://www.kitakoi.info/ [L,R=301]
+
+# BEGIN WordPress
+# "BEGIN WordPress" から "END WordPress" までのディレクティブ (行) は
+# 動的に生成され、WordPress フィルターによってのみ修正が可能です。
+# これらのマーカー間にあるディレクティブへのいかなる変更も上書きされてしまいます。
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
