@@ -214,7 +214,8 @@ header #pagination h2 {
 #new .listImage img {
   height: 180px;
   border-radius: 6px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #new .day {
   position: absolute;
@@ -292,7 +293,8 @@ header #pagination h2 {
 #kanren .listImage img {
   height: 180px;
   border-radius: 6px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #ranking .new_list li:first-child .listImage::after,
 #kanren .new_list li:first-child .listImage::after {
@@ -346,16 +348,16 @@ header #pagination h2 {
 }
 @media screen and (max-width: 480px) {
   #ranking .sub_title,
-  #kanren .sub_title {
+#kanren .sub_title {
     padding-bottom: 36px;
   }
   #ranking .wpp-list > li,
-  #kanren .wpp-list > li {
+#kanren .wpp-list > li {
     width: 47%;
   }
   #ranking .wpp-list > li:nth-child(1), #ranking .wpp-list > li:nth-child(2),
-  #kanren .wpp-list > li:nth-child(1),
-  #kanren .wpp-list > li:nth-child(2) {
+#kanren .wpp-list > li:nth-child(1),
+#kanren .wpp-list > li:nth-child(2) {
     margin-bottom: 30px;
   }
 }
@@ -409,7 +411,8 @@ header #pagination h2 {
 .listImage a img {
   height: 180px;
   border-radius: 6px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .listTitle {
@@ -506,7 +509,7 @@ header #pagination h2 {
   padding: 70px 0;
   width: 1060px;
   margin: 0 auto;
-  justify-content: space-between;
+  justify-content: center;
 }
 #sns .sns_box .insta_box p {
   width: 80px;
@@ -527,6 +530,7 @@ header #pagination h2 {
 }
 #sns .sns_box .tw_box {
   width: 500px;
+  display: none;
 }
 #sns .sns_box .tw_box p {
   width: 60px;
@@ -798,7 +802,8 @@ footer .ft_bottom p {
 #news .listImage img {
   height: 180px;
   border-radius: 6px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #news .news_list > li {
   display: flex;
@@ -1162,7 +1167,7 @@ footer .ft_bottom p {
     width: 150px;
   }
   #single .details th,
-  #single .details td {
+#single .details td {
     font-size: 14px;
     padding: 20px 0;
   }
@@ -1182,7 +1187,7 @@ footer .ft_bottom p {
     width: 15.9vw;
   }
   #single .details th,
-  #single .details td {
+#single .details td {
     font-size: 3.3vw;
     padding: 5px 0;
   }
@@ -1206,14 +1211,14 @@ footer .ft_bottom p {
     font-size: 4.7vw;
   }
   #single article > div:first-child h3,
-  #single article > div:first-child h4 {
+#single article > div:first-child h4 {
     font-size: 3.7vw;
   }
   #single article > div:first-child p {
     margin-bottom: 3.6vw;
   }
   #single #kanren,
-  #single #ranking {
+#single #ranking {
     width: 100%;
     padding: 0 20px 40px;
   }
@@ -1329,7 +1334,8 @@ footer .ft_bottom p {
 #serch_wrap .listImage img {
   height: 180px;
   border-radius: 6px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #category-ichiran .day,
 #serch_wrap .day {
@@ -1339,48 +1345,48 @@ footer .ft_bottom p {
 }
 @media screen and (max-width: 480px) {
   #category-ichiran,
-  #serch_wrap {
+#serch_wrap {
     width: 100%;
     padding: 40px 20px;
   }
   #category-ichiran .category span,
-  #serch_wrap .category span {
+#serch_wrap .category span {
     left: 5px;
     padding: 5px 4px;
     width: 94%;
     text-align: center;
   }
   #category-ichiran .title,
-  #serch_wrap .title {
+#serch_wrap .title {
     width: 100%;
   }
   #category-ichiran .sapporo h1::after,
-  #serch_wrap .sapporo h1::after {
+#serch_wrap .sapporo h1::after {
     right: 14%;
   }
   #category-ichiran .muroran h1::after,
-  #serch_wrap .muroran h1::after {
+#serch_wrap .muroran h1::after {
     right: 12%;
   }
   #category-ichiran .hakodate h1::after,
-  #serch_wrap .hakodate h1::after {
+#serch_wrap .hakodate h1::after {
     right: 10%;
   }
   #category-ichiran .tomakomai h1::after,
-  #serch_wrap .tomakomai h1::after {
+#serch_wrap .tomakomai h1::after {
     right: 6%;
   }
   #category-ichiran .other h1::after,
-  #serch_wrap .other h1::after {
+#serch_wrap .other h1::after {
     right: 20%;
   }
   #category-ichiran .wpp-list li,
-  #serch_wrap .wpp-list li {
+#serch_wrap .wpp-list li {
     width: 47%;
     margin-bottom: 70px !important;
   }
   #category-ichiran .wpp-list .day,
-  #serch_wrap .wpp-list .day {
+#serch_wrap .wpp-list .day {
     bottom: -40px;
   }
 }
@@ -1685,10 +1691,10 @@ footer .ft_bottom p {
     left: -9999px;
   }
   .pagination .first,
-  .pagination .previous,
-  .pagination .current,
-  .pagination .next,
-  .pagination .last {
+.pagination .previous,
+.pagination .current,
+.pagination .next,
+.pagination .last {
     position: initial;
     top: initial;
     left: initial;
@@ -1832,4 +1838,5 @@ footer .ft_bottom p {
     font-size: 3.4vw;
     margin: 0;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */

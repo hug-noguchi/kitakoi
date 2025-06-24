@@ -509,7 +509,7 @@ header {
     padding: 70px 0;
     width: 1060px;
     margin: 0 auto;
-    justify-content: space-between;
+    justify-content: center;
 
     .insta_box {
       p {
@@ -535,6 +535,7 @@ header {
 
     .tw_box {
       width: 500px;
+      display: none;
       p {
         width: 60px;
       }
