@@ -395,7 +395,13 @@ header #pagination h2 {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 2.666%;
+}
+@media screen and (max-width: 480px) {
+  .wpp-list {
+    justify-content: space-between;
+  }
 }
 .wpp-list > a {
   display: none;
