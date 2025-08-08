@@ -48,8 +48,15 @@ h1 {
   width: 100%;
   height: 96px;
   bottom: 0;
-  > div {
-    width: 50%;
+}
+
+#sb_instagram.sbi_medium {
+  .sbi_type_carousel {
+    .sbi_photo_wrap {
+      .fa-clone {
+        z-index: 0;
+      }
+    }
   }
 }
 
@@ -513,7 +520,7 @@ header {
     padding: 70px 0;
     width: 1060px;
     margin: 0 auto;
-    justify-content: center;
+    justify-content: space-between;
 
     .insta_box {
       p {
@@ -539,7 +546,6 @@ header {
 
     .tw_box {
       width: 500px;
-      display: none;
       p {
         width: 60px;
       }
@@ -623,23 +629,14 @@ header {
 
 #bnr {
   .bnr_box {
-    display: flex;
-    justify-content: space-between;
+    width: 500px;
     padding: 100px 0;
-    width: 1060px;
     margin: 0 auto;
-    li {
-      width: 500px;
-    }
   }
   @media screen and (max-width: 480px) {
     .bnr_box {
       width: 100%;
-      flex-wrap: wrap;
       padding: 40px 20px;
-      li:first-child {
-        padding-bottom: 20px;
-      }
     }
   }
 }

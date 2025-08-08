@@ -51,8 +51,9 @@ h1 {
   height: 96px;
   bottom: 0;
 }
-.flow_bnr_sp > div {
-  width: 50%;
+
+#sb_instagram.sbi_medium .sbi_type_carousel .sbi_photo_wrap .fa-clone {
+  z-index: 0;
 }
 
 .top_header {
@@ -515,7 +516,7 @@ header #pagination h2 {
   padding: 70px 0;
   width: 1060px;
   margin: 0 auto;
-  justify-content: center;
+  justify-content: space-between;
 }
 #sns .sns_box .insta_box p {
   width: 80px;
@@ -536,7 +537,6 @@ header #pagination h2 {
 }
 #sns .sns_box .tw_box {
   width: 500px;
-  display: none;
 }
 #sns .sns_box .tw_box p {
   width: 60px;
@@ -608,23 +608,14 @@ header #pagination h2 {
 }
 
 #bnr .bnr_box {
-  display: flex;
-  justify-content: space-between;
-  padding: 100px 0;
-  width: 1060px;
-  margin: 0 auto;
-}
-#bnr .bnr_box li {
   width: 500px;
+  padding: 100px 0;
+  margin: 0 auto;
 }
 @media screen and (max-width: 480px) {
   #bnr .bnr_box {
     width: 100%;
-    flex-wrap: wrap;
     padding: 40px 20px;
-  }
-  #bnr .bnr_box li:first-child {
-    padding-bottom: 20px;
   }
 }
 
