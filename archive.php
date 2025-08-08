@@ -1,31 +1,18 @@
 <?php get_header(); ?>
-
 <div class="flow_bnr pc">
   <div>
-    <a href="https://xn--t8j597j6jd.net/lp/ange_sapporo/" target="_blank">
-      <img src="<?php bloginfo('template_directory'); ?>/common/images/flow_bnr_sapporo.png" alt="札幌結婚式プレゼント">
-    </a>
-  </div>
-  <div>
-    <a href="https://xn--t8j597j6jd.net/lp/hokkaido" target="_blank">
-      <img src="<?php bloginfo('template_directory'); ?>/common/images/flow_bnr_other.png" alt="北海道結婚式プレゼント">
+    <a href="https://www.otokucon.jp/hokkaido/" target="_blank">
+      <img src="<?php bloginfo('template_directory'); ?>/common/images/bnr_hokkaido.png" alt="札幌結婚式プレゼント">
     </a>
   </div>
 </div>
-
 <div class="flow_bnr_sp sp">
   <div>
-    <a href="https://xn--t8j597j6jd.net/lp/ange_sapporo/" target="_blank">
-      <img src="<?php bloginfo('template_directory'); ?>/common/images/bnr_sapporo_sp.png" alt="札幌結婚式プレゼント">
-    </a>
-  </div>
-  <div>
-    <a href="https://xn--t8j597j6jd.net/lp/hokkaido" target="_blank">
-      <img src="<?php bloginfo('template_directory'); ?>/common/images/bnr_other_sp.png" alt="北海道結婚式プレゼント">
+    <a href="https://www.otokucon.jp/hokkaido/" target="_blank">
+      <img src="<?php bloginfo('template_directory'); ?>/common/images/fow_bnr_hokkaido_sp.png" alt="北海道結婚式プレゼント">
     </a>
   </div>
 </div>
-
 <main>
   <article class="contents">
     <section id="news">
@@ -97,23 +84,18 @@
           <?php endif; ?>
         </ul>
       </div>
-
       <!--ページネーション-->
       <?php if (function_exists('responsive_pagination')) {
         responsive_pagination($additional_loop->max_num_pages);
       } ?>
-
     </section>
   </article>
-
   <?php get_template_part('template/foot'); ?>
-
 </main>
-
 <?php get_footer(); ?>
 
 <script>
-  // basic paging logic to demo the buttons
+// basic paging logic to demo the buttons
 var pr = document.querySelector( '.paginate.left' );
 var pl = document.querySelector( '.paginate.right' );
 
@@ -138,7 +120,6 @@ $(function() {
         $(".B").toggleClass("C");
     });
 });
-
 </script>
 
 </body>

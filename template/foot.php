@@ -73,7 +73,6 @@
     </div>
   </div>
 </div>
-
 <div id="sns">
   <div class="sns_box">
     <div class="insta_box">
@@ -92,18 +91,12 @@
     </div>
   </div>
 </div>
-
 <div id="bnr">
-  <ul class="bnr_box">
-    <li>
-      <a href="https://xn--t8j597j6jd.net/lp/ange_sapporo/" target="_blank">
-        <img src="<?php bloginfo('template_directory'); ?>/common/images/bnr_sapporo.png">
+  <div class="bnr_box">
+    <div>
+      <a href="https://www.otokucon.jp/hokkaido/" target="_blank">
+        <img src="<?php bloginfo('template_directory'); ?>/common/images/flow_bnr_hokkaido.png" alt="北海道結婚式プレゼント">
       </a>
-    </li>
-    <li>
-      <a href="https://xn--t8j597j6jd.net/lp/hokkaido" target="_blank">
-        <img src="<?php bloginfo('template_directory'); ?>/common/images/bnr_other.png">
-      </a>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>

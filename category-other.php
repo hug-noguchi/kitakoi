@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <style>
   @media screen and (min-width: 481px) {
     header nav li:last-child {
@@ -8,33 +7,20 @@
     }
   }
 </style>
-
 <div class="flow_bnr pc">
   <div>
-    <a href="https://xn--t8j597j6jd.net/lp/ange_sapporo/" target="_blank">
-      <img src="<?php bloginfo('template_directory'); ?>/common/images/flow_bnr_sapporo.png" alt="札幌結婚式プレゼント">
-    </a>
-  </div>
-  <div>
-    <a href="https://xn--t8j597j6jd.net/lp/hokkaido" target="_blank">
-      <img src="<?php bloginfo('template_directory'); ?>/common/images/flow_bnr_other.png" alt="北海道結婚式プレゼント">
+    <a href="https://www.otokucon.jp/hokkaido/" target="_blank">
+      <img src="<?php bloginfo('template_directory'); ?>/common/images/bnr_hokkaido.png" alt="北海道結婚式プレゼント">
     </a>
   </div>
 </div>
-
 <div class="flow_bnr_sp sp">
   <div>
-    <a href="https://xn--t8j597j6jd.net/lp/ange_sapporo/" target="_blank">
-      <img src="<?php bloginfo('template_directory'); ?>/common/images/bnr_sapporo_sp.png" alt="札幌結婚式プレゼント">
-    </a>
-  </div>
-  <div>
-    <a href="https://xn--t8j597j6jd.net/lp/hokkaido" target="_blank">
-      <img src="<?php bloginfo('template_directory'); ?>/common/images/bnr_other_sp.png" alt="北海道結婚式プレゼント">
+    <a href="https://www.otokucon.jp/hokkaido/" target="_blank">
+      <img src="<?php bloginfo('template_directory'); ?>/common/images/fow_bnr_hokkaido_sp.png" alt="札幌結婚式プレゼント">
     </a>
   </div>
 </div>
-
 <main>
   <div id="category-ichiran">
     <div id="catTtl" class="ttl <?php echo get_the_category()[0]->slug; ?>">
@@ -46,7 +32,6 @@
         その他・ウェディング
       </p>
     </div>
-
     <div class="popular">
       <ul class="wpp-list">
         <?php if(have_posts()): ?>
@@ -107,5 +92,4 @@
   </div>
   <?php get_template_part('template/foot'); ?>
 </main>
-
 <?php get_footer(); ?>

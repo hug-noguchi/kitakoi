@@ -15,13 +15,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="description" content="『キタ・コイ』は、“北の恋は、本気の恋”をテーマに、
 カップルに向けた北海道の場所やモノ、コト、 美味しい食べ物を紹介するカルチャーコミュニティです。">
 <meta name="keywords" content="キタコイ">
-
 <link rel="SHORTCUT ICON" href="<?php bloginfo('template_url'); ?>/common/images/favicon.ico">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/common/scss/reset.css" media="all">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/common/scss/style.css" media="all">
 <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/common/scss/jquery.fatNav.min.css">
-
 <?php wp_head(); ?>
 </head>
 <body>
@@ -29,15 +27,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRSXT7R"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+<style>
+  #pagination h2 {
+    display: none;
+  }
+</style>
+
 <header class="top_header">
   <div class="hd_box pc">
     <div class="hd_left">
       <p>札幌・室蘭・函館・苫小牧の結婚情報サイト</p>
-      <p class="logo">
+      <h1 class="logo">
         <a href="/">
           <img src="<?php bloginfo('template_directory'); ?>/common/images/logo_gray.svg" alt="キタコイ">
         </a>
-      </p>
+      </h1>
     </div>
     <div>
       <nav class="header-nav">
@@ -126,18 +131,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
   </div>
-
   <div class="sp">
     <div class="hd_box">
       <div class="hd_left">
         <p>札幌・室蘭・函館・苫小牧の結婚情報サイト</p>
-        <p class="logo">
+        <h1 class="logo">
           <a href="/">
             <img src="<?php bloginfo('template_directory'); ?>/common/images/logo_gray.svg" alt="キタコイ">
           </a>
-        </p>
+        </h1>
       </div>
-
       <div class="hd_search">
         <img src="<?php bloginfo('template_directory'); ?>/common/images/search.svg" alt="検索アイコン" class="icon_search A">
         <div class="B">
@@ -145,17 +148,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="sample-popup-background"></div>
         </div>
       </div>
-
       <div class="fat-nav">
         <nav class="header-nav fat-nav__wrapper">
           <div class="fat-nav_box">
             <div class="fat-nav_detail">
               <p>札幌・室蘭・函館・苫小牧の結婚情報サイト</p>
-              <p class="fat-logo">
+              <h1 class="fat-logo">
                 <a href="/">
                   <img src="<?php bloginfo('template_directory'); ?>/common/images/logo_gray.svg" alt="キタコイ">
                 </a>
-              </p>
+              </h1>
             </div>
             <img src="<?php bloginfo('template_directory'); ?>/common/images/search.svg" alt="検索アイコン" class="icon_search">
           </div>
@@ -244,43 +246,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="swiper-button-next"></div>
     </div>
   </div>
-
-
-
 </header>
-
-<style>
-  #pagination h2 {
-    display: none;
-  }
-</style>
-
 <div class="flow_bnr pc">
   <div>
-    <a href="https://xn--t8j597j6jd.net/lp/ange_sapporo/" target="_blank">
-      <img src="<?php bloginfo('template_directory'); ?>/common/images/flow_bnr_sapporo.png" alt="札幌結婚式プレゼント">
-    </a>
-  </div>
-  <div>
-    <a href="https://xn--t8j597j6jd.net/lp/hokkaido" target="_blank">
-      <img src="<?php bloginfo('template_directory'); ?>/common/images/flow_bnr_other.png" alt="北海道結婚式プレゼント">
+    <a href="https://www.otokucon.jp/hokkaido/" target="_blank">
+      <img src="<?php bloginfo('template_directory'); ?>/common/images/bnr_hokkaido.png" alt="北海道結婚式プレゼント">
     </a>
   </div>
 </div>
-
 <div class="flow_bnr_sp sp">
   <div>
-    <a href="https://xn--t8j597j6jd.net/lp/ange_sapporo/" target="_blank">
-      <img src="<?php bloginfo('template_directory'); ?>/common/images/bnr_sapporo_sp.png" alt="札幌結婚式プレゼント">
-    </a>
-  </div>
-  <div>
-    <a href="https://xn--t8j597j6jd.net/lp/hokkaido" target="_blank">
-      <img src="<?php bloginfo('template_directory'); ?>/common/images/bnr_other_sp.png" alt="北海道結婚式プレゼント">
+    <a href="https://www.otokucon.jp/hokkaido/" target="_blank">
+      <img src="<?php bloginfo('template_directory'); ?>/common/images/fow_bnr_hokkaido_sp.png" alt="札幌結婚式プレゼント">
     </a>
   </div>
 </div>
-
 <main>
   <div class="contents">
     <section id="new">
@@ -355,5 +335,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <?php get_template_part('template/foot'); ?>
   </div>
 </main>
-
 <?php get_footer(); ?>

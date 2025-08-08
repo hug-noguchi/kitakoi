@@ -1,38 +1,24 @@
 <?php get_header('single'); ?>
-
 <div class="flow_bnr pc">
   <div>
-    <a href="https://xn--t8j597j6jd.net/lp/ange_sapporo/" target="_blank">
-      <img src="<?php bloginfo('template_directory'); ?>/common/images/flow_bnr_sapporo.png" alt="札幌結婚式プレゼント">
-    </a>
-  </div>
-  <div>
-    <a href="https://xn--t8j597j6jd.net/lp/hokkaido" target="_blank">
-      <img src="<?php bloginfo('template_directory'); ?>/common/images/flow_bnr_other.png" alt="北海道結婚式プレゼント">
+    <a href="https://www.otokucon.jp/hokkaido/" target="_blank">
+      <img src="<?php bloginfo('template_directory'); ?>/common/images/bnr_hokkaido.png" alt="北海道結婚式プレゼント">
     </a>
   </div>
 </div>
-
 <div class="flow_bnr_sp sp">
   <div>
-    <a href="https://xn--t8j597j6jd.net/lp/ange_sapporo/" target="_blank">
-      <img src="<?php bloginfo('template_directory'); ?>/common/images/bnr_sapporo_sp.png" alt="札幌結婚式プレゼント">
-    </a>
-  </div>
-  <div>
-    <a href="https://xn--t8j597j6jd.net/lp/hokkaido" target="_blank">
-      <img src="<?php bloginfo('template_directory'); ?>/common/images/bnr_other_sp.png" alt="北海道結婚式プレゼント">
+    <a href="https://www.otokucon.jp/hokkaido/" target="_blank">
+      <img src="<?php bloginfo('template_directory'); ?>/common/images/fow_bnr_hokkaido_sp.png" alt="札幌結婚式プレゼント">
     </a>
   </div>
 </div>
-
 <?php
-    // 記事のビュー数を更新(ログイン中・クローラーは除外)
-    if (!is_user_logged_in() && !is_robots()) {
-      setPostViews(get_the_ID());
-    }
-  ?>
-
+  // 記事のビュー数を更新(ログイン中・クローラーは除外)
+  if (!is_user_logged_in() && !is_robots()) {
+    setPostViews(get_the_ID());
+  }
+?>
 <main>
   <div id="single">
     <div id="wrapper" class="clearfix">
@@ -46,7 +32,6 @@
               最終更新日：<?php the_modified_date('Y.m.d') ?>　</span>
               <?php the_category(); ?>
             </p>
-
             <div class="share">SHARE：
               <div>
                 <a href="https://twitter.com/share?url=&text=<?php echo get_the_title();?>" target="_blank" rel="nofollow noopener">
@@ -55,28 +40,22 @@
               </div>
             </div>
           </div>
-
           <h1><?php the_title(); ?></h1>
-
           <div class="read-time">
             <?php echo sprintf('読了予測：約%s分', get_time_to_content_read(get_the_content())); ?>
           </div>
-
           <div class="eyecatch">
             <?php if (has_post_thumbnail()) : ?>
               <?php the_post_thumbnail(); ?>
             <?php else : ?>
             <?php endif; ?>
           </div>
-
           <div class="content">
             <?php the_content(); ?>
           </div>
-
           <?php endwhile;else: ?>
           <?php endif; ?>
         </div>
-
         <?php
           $group_set = SCF::get( 'spot' );
           foreach ( $group_set as $field_name => $field_value ) {
@@ -130,7 +109,6 @@
               </td>
             </tr>
             <?php endif;?>
-
             <?php if($field_value['web']):?>
             <tr>
               <th>WEB</th>
@@ -147,7 +125,6 @@
         <?php } ?>
       </article>
     </div>
-
     <div id="kanren">
       <div class="heading">
         <div class="title">
@@ -173,7 +150,6 @@
 
         $related_cats_query = new WP_Query($args);
       ?>
-
       <div class="related-posts">
         <?php if ($related_cats_query->have_posts()) : ?>
           <ul class="wpp-list">
@@ -236,5 +212,4 @@
     <?php get_template_part('template/foot'); ?>
   </div>
 </main>
-
 <?php get_footer(); ?>
