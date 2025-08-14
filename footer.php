@@ -116,6 +116,15 @@
     $.fatNav();
   }());
 
+  $(document).ready(function () {
+    // 各 .bnr_ange_sapporo 要素に対して処理を実行
+    $(".bnr_ange_sapporo").each(function () {
+      // 新しい要素を生成
+      var newBanner = $('<div class="bnr_ceremonyhall"><p>札幌の式場詳細はこちら⬇︎</p><div><a href="https://www.bellclassic.co.jp/hokkaidou/lavert/" target="_blank"><img src="<?php bloginfo('template_url'); ?>/common/images/bnr_ange_sapporo.png" alt="アールベルアンジェ札幌バナー"></a></div></div>');
+      // 現在の .bnr_ange_sapporo 要素の直後に追加
+      $(this).after(newBanner);
+    });
+  });
 </script>
 <?php wp_footer(); ?>
 </body>

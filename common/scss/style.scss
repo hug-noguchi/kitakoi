@@ -1057,6 +1057,26 @@ footer {
       }
     }
   }
+  .bnr_ceremonyhall {
+    text-align: center;
+    margin-bottom: 60px;
+    @media screen and (min-width: 481px) {
+      margin-top: 6vw;
+    }
+    @media screen and (max-width: 480px) {
+      margin-top: 16vw !important;
+    }
+    p {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2rem !important;
+      margin-bottom: 8px !important;
+      line-height: 1.6 !important;
+      @media screen and (max-width: 480px) {
+        font-size: 1rem !important;
+      }
+    }
+  }
   article {
     > div:first-child {
       h1 {

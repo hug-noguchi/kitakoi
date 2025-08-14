@@ -1029,6 +1029,32 @@ footer .ft_bottom p {
     display: block;
   }
 }
+#single .bnr_ceremonyhall {
+  text-align: center;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 481px) {
+  #single .bnr_ceremonyhall {
+    margin-top: 6vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  #single .bnr_ceremonyhall {
+    margin-top: 16vw !important;
+  }
+}
+#single .bnr_ceremonyhall p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem !important;
+  margin-bottom: 8px !important;
+  line-height: 1.6 !important;
+}
+@media screen and (max-width: 480px) {
+  #single .bnr_ceremonyhall p {
+    font-size: 1rem !important;
+  }
+}
 #single article > div:first-child h1 {
   font-size: 28px;
   line-height: 1.6;
