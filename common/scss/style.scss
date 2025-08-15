@@ -900,6 +900,9 @@ footer {
   #wrapper {
     width: 840px;
     margin: 0 auto;
+    .bnr_ceremonyhall_hokkaido {
+      padding: 0 0 80px;
+    }
   }
   article {
     .bnr {
@@ -1023,6 +1026,11 @@ footer {
         font-weight: bold;
         color: #5569b4;
       }
+      .list_space {
+        padding-left: 24px;
+        text-indent: -14px;
+        padding-right: 10px;
+      }
       @media screen and (min-width: 481px) {
         margin-bottom: 50px;
       }
@@ -1075,6 +1083,23 @@ footer {
       @media screen and (max-width: 480px) {
         font-size: 1rem !important;
       }
+    }
+  }
+  .bnr_ceremonyhall_hokkaido {
+    margin: 0 auto;
+    padding: 20px 0 80px;
+    @media screen and (max-width: 480px) {
+      padding: 0 0 60px;
+    }
+  }
+  .rightnow_campaign {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem !important;
+    margin-bottom: 8px !important;
+    line-height: 1.6 !important;
+    @media screen and (max-width: 480px) {
+      font-size: 1rem !important;
     }
   }
   article {
@@ -1204,6 +1229,41 @@ footer {
     td a {
       color: #4baaba;
       word-break: break-all;
+    }
+  }
+
+  .single_table {
+    width: 100%;
+    text-align: left;
+    border: solid 2px #fff389;
+    margin-bottom: 60px;
+    line-height: 2.5;
+    @media screen and (max-width: 480px) {
+      margin-bottom: 3.6vw;
+      line-height: 1.8;
+    }
+    th {
+      color: #5569b4;
+      background-color: #fffdeb;
+      border-right: 1px solid #fff389;
+      border-bottom: 1px solid #fff389;
+      padding: 10px;
+      @media screen and (max-width: 480px) {
+        width: 32%;
+      }
+    }
+    td {
+      border-right: 1px solid #fff389;
+      border-bottom: 1px solid #fff389;
+      padding: 10px;
+      word-break: break-all;
+      white-space: normal;
+      @media screen and (max-width: 480px) {
+        width: 68%;
+      }
+      a {
+        text-decoration: underline;
+      }
     }
   }
 
