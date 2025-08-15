@@ -125,6 +125,26 @@
       $(this).after(newBanner);
     });
   });
+
+  $(document).ready(function () {
+    // 各 .bnr_ange_muroran 要素に対して処理を実行
+    $(".bnr_ange_muroran").each(function () {
+      // 新しい要素を生成
+      var newBanner02 = $('<div class="bnr_ceremonyhall"><p>室蘭の式場詳細はこちら⬇︎</p><div><a href="https://www.bellclassic.co.jp/hokkaidou/muroran/" target="_blank"><img src="<?php bloginfo('template_url'); ?>/common/images/bnr_ange_muroran.png" alt="アールベルアンジェ室蘭バナー"></a></div></div>');
+      // 現在の .bnr_ange_muroran 要素の直後に追加
+      $(this).after(newBanner02);
+    });
+  });
+
+  $(document).ready(function () {
+    // 各 .bnr_hokkaido_single 要素に対して処理を実行
+    $(".bnr_hokkaido_single").each(function () {
+      // 新しい要素を生成
+      var newBanner03 = $('<div class="bnr_ceremonyhall_hokkaido"><div><a href="https://www.otokucon.jp/hokkaido/" target="_blank"><img src="<?php bloginfo('template_url'); ?>/common/images/bnr_single_hokkaido.png" alt="北海道結婚式プレゼント" class="pc"><img src="<?php bloginfo('template_url'); ?>/common/images/bnr_single_hokkaido_sp.png" alt="北海道結婚式プレゼント" class="sp"></a></div></div>');
+      // 現在の .bnr_hokkaido_single 要素の直後に追加
+      $(this).after(newBanner03);
+    });
+  });
 </script>
 <?php wp_footer(); ?>
 </body>
