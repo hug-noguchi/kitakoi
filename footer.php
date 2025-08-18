@@ -145,6 +145,16 @@
       $(this).after(newBanner03);
     });
   });
+
+  $(document).ready(function () {
+    // 各 .bnr_tomakomai 要素に対して処理を実行
+    $(".bnr_tomakomai").each(function () {
+      // 新しい要素を生成
+      var newBanner04 = $('<div class="bnr_ceremonyhall"><p>苫小牧の式場詳細はこちら⬇︎</p><div><a href="https://www.bellclassic.co.jp/hokkaidou/tomakomai/" target="_blank"><img src="<?php bloginfo('template_url'); ?>/common/images/bnr_tomakomai.png" alt="アールベルアンジェ苫小牧バナー"></a></div></div>');
+      // 現在の .bnr_tomakomai 要素の直後に追加
+      $(this).after(newBanner04);
+    });
+  });
 </script>
 <?php wp_footer(); ?>
 </body>
