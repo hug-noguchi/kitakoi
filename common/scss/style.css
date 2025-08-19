@@ -860,6 +860,7 @@ footer .ft_bottom p {
 #single .btn_article {
   color: #4baaba;
   font-weight: bold;
+  text-decoration: underline;
 }
 #single #wrapper {
   width: 840px;
@@ -870,7 +871,6 @@ footer .ft_bottom p {
   margin: 60px auto 0;
 }
 #single article .bnr {
-  padding-top: 80px;
   padding-bottom: 80px;
 }
 #single article .bnr img {
@@ -1322,7 +1322,6 @@ footer .ft_bottom p {
     width: 100%;
   }
   #single article .bnr {
-    padding-top: 50px;
     padding-bottom: 50px;
   }
   #single article .shoukai {

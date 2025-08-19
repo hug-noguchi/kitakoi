@@ -895,6 +895,7 @@ footer {
   .btn_article {
     color: #4baaba;
     font-weight: bold;
+    text-decoration: underline;
   }
 
   #wrapper {
@@ -907,7 +908,6 @@ footer {
   }
   article {
     .bnr {
-      padding-top: 80px;
       padding-bottom: 80px;
       img {
         width: 100%;
@@ -1351,7 +1351,6 @@ footer {
     }
     article {
       .bnr {
-        padding-top: 50px;
         padding-bottom: 50px;
       }
       .shoukai {
