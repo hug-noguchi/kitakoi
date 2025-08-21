@@ -82,13 +82,13 @@
       <p>Instagram</p>
       <div><?php echo do_shortcode('[instagram-feed feed=3]'); ?></div>
     </div>
-    <div class="tw_box">
+    <!-- <div class="tw_box">
       <div class="icon_tw">
         <img src="<?php bloginfo('template_directory'); ?>/common/images/tw_white.svg">
       </div>
       <p>Twitter</p>
       <a class="twitter-timeline" href="https://twitter.com/kita_koi?ref_src=twsrc%5Etfw" data-width="500" data-height="330">Tweets by kita_koi</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
+    </div> -->
   </div>
 </div>
 <div id="bnr">

@@ -516,11 +516,11 @@ header {
 #sns {
   background-color: #edf3f5;
   .sns_box {
-    display: flex;
     padding: 70px 0;
-    width: 1060px;
-    margin: 0 auto;
-    justify-content: space-between;
+    // display: flex;
+    // width: 1060px;
+    // margin: 0 auto;
+    // justify-content: space-between;
 
     .insta_box {
       p {
@@ -595,6 +595,7 @@ header {
   @media screen and (min-width: 481px) {
     .insta_box {
       width: 500px;
+      margin: 0 auto;
     }
   }
   @media screen and (max-width: 480px) {

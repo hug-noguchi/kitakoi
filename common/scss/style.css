@@ -512,11 +512,7 @@ header #pagination h2 {
   background-color: #edf3f5;
 }
 #sns .sns_box {
-  display: flex;
   padding: 70px 0;
-  width: 1060px;
-  margin: 0 auto;
-  justify-content: space-between;
 }
 #sns .sns_box .insta_box p {
   width: 80px;
@@ -578,6 +574,7 @@ header #pagination h2 {
 @media screen and (min-width: 481px) {
   #sns .insta_box {
     width: 500px;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 480px) {
