@@ -854,6 +854,20 @@ footer .ft_bottom p {
 #single .bold {
   font-weight: bold;
 }
+#single .box_yellow {
+  background-color: #fffdeb;
+  padding: 20px 10px !important;
+}
+#single .box_pink {
+  background-color: #ffe9e9;
+  padding: 20px 10px !important;
+}
+#single .marker_yellow {
+  background-color: #ffffbf;
+}
+#single .marker_pink {
+  background-color: #ffe9e9;
+}
 #single .btn_article {
   color: #4baaba;
   font-weight: bold;
@@ -1240,6 +1254,25 @@ footer .ft_bottom p {
 }
 #single .single_table td a {
   text-decoration: underline;
+}
+#single .single_table_scroll {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+#single .single_table_scroll .single_table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+#single .single_table_scroll .single_table th,
+#single .single_table_scroll .single_table td {
+  padding: 8px 12px;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 @media screen and (min-width: 769px) {
   #single .details {

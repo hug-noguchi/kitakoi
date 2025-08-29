@@ -893,6 +893,24 @@ footer {
     font-weight: bold;
   }
 
+  .box_yellow {
+    background-color: #fffdeb;
+    padding: 20px 10px !important;
+  }
+
+  .box_pink {
+    background-color: #ffe9e9;
+    padding: 20px 10px !important;
+  }
+
+  .marker_yellow {
+    background-color: #ffffbf;
+  }
+
+  .marker_pink {
+    background-color: #ffe9e9;
+  }
+
   .btn_article {
     color: #4baaba;
     font-weight: bold;
@@ -1265,6 +1283,26 @@ footer {
       }
       a {
         text-decoration: underline;
+      }
+    }
+  }
+
+  .single_table_scroll {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    .single_table {
+      width: 100%;
+      min-width: 640px;
+      border-collapse: collapse;
+      table-layout: fixed;
+      th,
+      td {
+        padding: 8px 12px;
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: anywhere;
       }
     }
   }
