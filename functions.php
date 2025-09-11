@@ -119,14 +119,14 @@ remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
   }
   add_action('after_setup_theme', 'theme_setup');
 
-  //本文を読むのにかかる時間
+  //読了予測
   function get_time_to_content_read($content){
     $count = mb_strlen(strip_tags($content));
     if ($count == 0) {
-      return 0;
+      return 1;
     }
-    $minutes = floor($count / 600) + 1;
-    return $minutes;
+    $minutes = ceil($count / 2000);
+    return max(1, $minutes);
   }
 
 ?>
