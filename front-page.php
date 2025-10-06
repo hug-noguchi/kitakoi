@@ -333,6 +333,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
     <?php get_template_part('template/foot'); ?>
+    <div id="bnr_otokucon">
+      <div class="bnr_otokucon_box">
+        <div>
+          <a href="https://xn--t8j597j6jd.net/" target="_blank">
+            <img src="<?php bloginfo('template_directory'); ?>/common/images/bnr_otokucon_pc.png" class="pc" alt="お得婚「結婚って、おもしろいらしい」">
+            <img src="<?php bloginfo('template_directory'); ?>/common/images/bnr_otokucon_sp.png" class="sp" alt="お得婚「結婚って、おもしろいらしい」">
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </main>
 <?php get_footer(); ?>
