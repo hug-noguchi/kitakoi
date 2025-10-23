@@ -160,7 +160,7 @@
     // 各 .bnr_hakodate 要素に対して処理を実行
     $(".bnr_hakodate").each(function () {
       // 新しい要素を生成
-      var newBanner05 = $('<div class="bnr_ceremonyhall"><p>函館の式場詳細はこちら⬇︎</p><div><a href="https://www.bellclassic.co.jp/hokkaidou/hakodate/" target="_blank"><img src="<?php bloginfo('template_url'); ?>/common/images/bnr_tomakomai.png" alt="ベルクラシック函館バナー"></a></div></div>');
+      var newBanner05 = $('<div class="bnr_ceremonyhall"><p>函館の式場詳細はこちら⬇︎</p><div><a href="https://www.bellclassic.co.jp/hokkaidou/hakodate/" target="_blank"><img src="<?php bloginfo('template_url'); ?>/common/images/bnr_bellclassic_hakodate.png" alt="ベルクラシック函館バナー"></a></div></div>');
       // 現在の .bnr_hakodate 要素の直後に追加
       $(this).after(newBanner05);
     });
