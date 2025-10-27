@@ -1286,6 +1286,35 @@ footer .ft_bottom p {
   word-break: break-word;
   overflow-wrap: anywhere;
 }
+#single table.facility_info {
+  width: 100%;
+  margin-bottom: 40px;
+}
+#single table.facility_info th {
+  padding: 5px 20px;
+  color: #5569b4;
+  empty-cells: hide;
+  background-color: #fff389;
+  width: 30%;
+}
+#single table.facility_info td {
+  vertical-align: top;
+  padding: 10px 20px;
+  background-color: #fffded;
+}
+#single table.facility_info th,
+#single table.facility_info td {
+  line-height: 2.5;
+  border: 1px solid #fff070;
+}
+@media screen and (max-width: 768px) {
+  #single table.facility_info {
+    display: block;
+    overflow-x: scroll;
+    white-space: nowrap;
+    font-size: 3.45vw;
+  }
+}
 @media screen and (min-width: 769px) {
   #single .details {
     padding-bottom: 50px;

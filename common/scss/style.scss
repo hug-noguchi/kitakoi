@@ -1319,6 +1319,34 @@ footer {
     }
   }
 
+  table.facility_info {
+    width: 100%;
+    margin-bottom: 40px;
+    th {
+      padding: 5px 20px;
+      color: #5569b4;
+      empty-cells: hide;
+      background-color: #fff389;
+      width: 30%;
+    }
+    td {
+      vertical-align: top;
+      padding: 10px 20px;
+      background-color: #fffded;
+    }
+    th,
+    td {
+      line-height: 2.5;
+      border: 1px solid #fff070;
+    }
+    @media screen and (max-width: 768px) {
+      display: block;
+      overflow-x: scroll;
+      white-space: nowrap;
+      font-size: 3.45vw;
+    }
+  }
+
   @media screen and (min-width: 769px) {
     .details {
       padding-bottom: 50px;
