@@ -180,6 +180,43 @@ RewriteRule ^hakodate_wedding/hakodate-charm/$ https://www.kitakoi.info/hakodate
 # 240805
 RewriteRule ^other/sapporo-kashikiriburo/$ hakodate_wedding/other/sapporo-familybath/ [L,R=301]
 
+# 251031
+RewriteRule ^other/sapporo_date_rainy/$ sapporo_wedding/sapporo_date_rainy/ [L,R=301]
+RewriteRule ^other/sapporo_propose/$ sapporo_wedding/sapporo_propose/ [L,R=301]
+RewriteRule ^other/sapporo-date/$ sapporo_wedding/sapporo-date/ [L,R=301]
+RewriteRule ^other/sapporo-familybath/$ sapporo_wedding/sapporo-familybath/ [L,R=301]
+RewriteRule ^other/sapporo-winter-date/$ sapporo_wedding/sapporo-winter-date/ [L,R=301]
+RewriteRule ^other/murorann-date-2/$ muroran_wedding/murorann-date-2/ [L,R=301]
+RewriteRule ^other/drive/$ sapporo_wedding/drive/ [L,R=301]
+RewriteRule ^other/hakodate-nightview-3/$ hakodate_wedding/hakodate-nightview-3/ [L,R=301]
+RewriteRule ^other/sapporo-couplesheet/$ sapporo_wedding/sapporo-couplesheet/ [L,R=301]
+RewriteRule ^other/bridal-nailchip/$ sapporo_wedding/bridal-nailchip/ [L,R=301]
+RewriteRule ^other/bridalnail/$ sapporo_wedding/bridalnail/ [L,R=301]
+RewriteRule ^other/propose-datespot/$ sapporo_wedding/propose-datespot/ [L,R=301]
+RewriteRule ^other/hakodate-hotel/$ hakodate_wedding/hakodate-hotel/ [L,R=301]
+RewriteRule ^other/hakodate-nightview/$ hakodate_wedding/hakodate-nightview/ [L,R=301]
+RewriteRule ^other/hakodate-nightview-4/$ hakodate_wedding/hakodate-nightview-4/ [L,R=301]
+RewriteRule ^other/sapporo-ganbanyoku/$ sapporo_wedding/sapporo-ganbanyoku/ [L,R=301]
+RewriteRule ^other/sapporo-kashikiriburo/$ sapporo_wedding/sapporo-kashikiriburo/ [L,R=301]
+RewriteRule ^other/sapporo-yado-2/$ sapporo_wedding/sapporo-yado-2/ [L,R=301]
+RewriteRule ^other/sapporo-guesthouse/$ sapporo_wedding/sapporo-guesthouse/ [L,R=301]
+RewriteRule ^other/sapporo-yado/$ sapporo_wedding/sapporo-yado/ [L,R=301]
+RewriteRule ^other/sapporo-onsenyado/$ sapporo_wedding/sapporo-onsenyado/ [L,R=301]
+RewriteRule ^other/sapporo-drive/$ sapporo_wedding/sapporo-drive/ [L,R=301]
+RewriteRule ^other/hakodate-dinner/$ hakodate_wedding/hakodate-dinner/ [L,R=301]
+RewriteRule ^other/sapporo-hotel/$ sapporo_wedding/sapporo-hotel/ [L,R=301]
+RewriteRule ^other/sapporo-dinner/$ sapporo_wedding/sapporo-dinner/ [L,R=301]
+RewriteRule ^other/hakodate-yakiniku/$ hakodate_wedding/hakodate-yakiniku/ [L,R=301]
+RewriteRule ^other/murorann-dinner/$ muroran_wedding/murorann-dinner/ [L,R=301]
+RewriteRule ^other/planetarium/$ sapporo_wedding/planetarium/ [L,R=301]
+RewriteRule ^other/jr-date/$ sapporo_wedding/jr-date/ [L,R=301]
+RewriteRule ^other/hopkkaido-datespots/$ sapporo_wedding/hopkkaido-datespots/ [L,R=301]
+RewriteRule ^other/sapporo-gourmet/$ sapporo_wedding/sapporo-gourmet/ [L,R=301]
+RewriteRule ^other/murorann-date/$ muroran_wedding/murorann-date/ [L,R=301]
+RewriteRule ^other/centurymarina/$ hakodate_wedding/centurymarina/ [L,R=301]
+RewriteRule ^other/gothicstyle/$ hakodate_wedding/gothicstyle/ [L,R=301]
+RewriteRule ^other/sapporo-misoramen/$ sapporo_wedding/sapporo-misoramen/ [L,R=301]
+
 # BEGIN WordPress
 # "BEGIN WordPress" から "END WordPress" までのディレクティブ (行) は
 # 動的に生成され、WordPress フィルターによってのみ修正が可能です。
