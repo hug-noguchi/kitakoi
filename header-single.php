@@ -11,18 +11,116 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="format-detection" content="telephone=no">
-
 <?php if ( have_posts() ) : ?>
   <?php while ( have_posts() ) : the_post(); ?>
   <title><?php the_title(); ?>｜キタコイ</title>
   <?php endwhile;?>
 <?php endif; ?>
-
-<meta name="description" content="『キタ・コイ』は、“北の恋は、本気の恋”をテーマに、
-カップルに向けた北海道の場所やモノ、コト、 美味しい食べ物を紹介するカルチャーコミュニティです。">
-<meta name="keywords" content="キタコイ">
-
+<?php
+  $meta_description = get_post_meta( get_the_ID(), 'description', true );
+  if ( ! $meta_description ) {
+      $meta_description = trim(
+          preg_replace('/\s+/u', ' ', get_the_title() . '｜' . wp_strip_all_tags( get_the_excerpt() ))
+      );
+  }
+?>
+<meta name="description" content="<?php echo esc_attr( $meta_description ); ?>">
 <link rel="SHORTCUT ICON" href="<?php bloginfo('template_url'); ?>/common/images/favicon.ico">
+<script type="application/ld+json">
+<?php
+    $id = get_permalink();
+    $title = get_the_title();
+    $image = get_the_post_thumbnail_url(null, 'full');
+    $published = get_the_date('Y-m-d');
+    $modified = get_the_modified_date('Y-m-d');
+
+    // ▼ カスタムフィールド description を取得
+    $custom_description = get_post_meta(get_the_ID(), 'description', true);
+
+    // ▼ 未入力の場合は fallback（抜粋 30語）
+    if ( $custom_description ) {
+        $description = $custom_description;
+    } else {
+        $description = wp_trim_words(strip_tags(get_the_excerpt()), 30, '...');
+    }
+
+    echo json_encode([
+        "@context" => "https://schema.org",
+        "@type" => "BlogPosting",
+        "mainEntityOfPage" => ["@type" => "WebPage", "@id" => $id],
+        "headline" => $title,
+        "image" => $image,
+        "datePublished" => $published,
+        "dateModified" => $modified,
+        "author" => [
+            "@type" => "Person",
+            "name" => "トイ"
+        ],
+        "publisher" => [
+            "@type" => "Organization",
+            "name" => "キタコイ",
+            "logo" => [
+                "@type" => "ImageObject",
+                "url" => "https://www.kitakoi.info/wp-content/themes/kitakoi_new/common/images/logo_gray.svg"
+            ]
+        ],
+        "description" => $description
+    ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+?>
+</script>
+<script type="application/ld+json">
+<?php
+// パンくずリスト用の配列を作成
+$itemListElement = [];
+
+// 1階層目：HOME
+$itemListElement[] = [
+    "@type"    => "ListItem",
+    "position" => 1,
+    "name"     => "HOME",
+    "item"     => home_url( '/' ),
+];
+
+// 投稿ページの場合のみ、カテゴリ＋記事タイトルを追加
+if ( is_single() ) {
+
+    // カテゴリ取得（先頭の1つを使用）
+    $categories = get_the_category();
+    if ( ! empty( $categories ) ) {
+        $cat = $categories[0];
+
+        // 2階層目：カテゴリ
+        $itemListElement[] = [
+            "@type"    => "ListItem",
+            "position" => 2,
+            "name"     => $cat->name,                 // パンくずのカテゴリー名
+            "item"     => get_category_link( $cat->term_id ), // カテゴリーURL
+        ];
+    }
+
+    // 3階層目：記事
+    $itemListElement[] = [
+        "@type"    => "ListItem",
+        "position" => count( $itemListElement ) + 1, // 2 or 3 になる
+        "name"     => get_the_title(),               // 記事タイトル
+        "item"     => get_permalink(),               // 記事URL
+    ];
+}
+
+// schema.org 用の配列をまとめる
+$breadcrumb_json = [
+    "@context"        => "https://schema.org",
+    "@type"           => "BreadcrumbList",
+    "itemListElement" => $itemListElement,
+];
+
+// JSONとして出力
+echo json_encode(
+    $breadcrumb_json,
+    JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT
+);
+?>
+</script>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/common/scss/reset.css" media="all">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/common/scss/style.css" media="all">
 <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
