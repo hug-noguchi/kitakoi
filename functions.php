@@ -129,4 +129,22 @@ remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
     return max(1, $minutes);
   }
 
+  // 記事内ファーストビューのみloading="lazy"解除
+  add_filter('wp_get_attachment_image_attributes', function($attr) {
+
+    // single.php のページだけ
+    if (!is_single()) {
+        return $attr;
+    }
+
+    static $image_count = 0;
+    $image_count++;
+
+    if ($image_count === 1) {
+        unset($attr['loading']);
+    }
+
+    return $attr;
+  });
+
 ?>
