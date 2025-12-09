@@ -977,6 +977,9 @@ footer {
           line-height: 1.2 !important;
           &:nth-child(1) {
             font-size: 13px;
+            @media screen and (max-width: 480px) {
+              font-size: 14px;
+            }
           }
           &:nth-child(2) {
             font-weight: bold;
@@ -1067,7 +1070,9 @@ footer {
         margin-bottom: 50px;
       }
       @media screen and (max-width: 480px) {
+        font-size: 16px;
         margin-bottom: 3.6vw;
+        line-height: 2;
       }
     }
   }
@@ -1343,7 +1348,11 @@ footer {
       display: block;
       overflow-x: scroll;
       white-space: nowrap;
-      font-size: 3.45vw;
+      font-size: 16px;
+      th,
+      td {
+        line-height: 2;
+      }
     }
   }
 
@@ -1402,18 +1411,25 @@ footer {
     article {
       > div:first-child {
         h1 {
-          font-size: 4.8vw;
-          line-height: 1.4;
+          font-size: 22px;
+          line-height: 2;
         }
         h2 {
-          font-size: 4.7vw;
+          font-size: 20px;
+          line-height: 2;
         }
-        h3,
+        h3 {
+          font-size: 18px;
+          line-height: 2;
+        }
         h4 {
-          font-size: 3.7vw;
+          font-size: 16px;
+          line-height: 2;
         }
         p {
+          font-size: 16px;
           margin-bottom: 3.6vw;
+          line-height: 2;
         }
       }
     }
@@ -1973,84 +1989,81 @@ footer {
   display: block;
   display: flex;
   justify-content: space-between;
-}
-
-.blog-card::before {
-  background-color: #4baaba;
-  color: #fff;
-  content: "合わせて読みたい";
-  font-size: 12px;
-  display: block;
-  padding: 10px 20px;
-  position: absolute;
-  top: -15px;
-  left: 10px;
-}
-
-.blog-card a {
-  padding: 20px 0px 10px;
-  text-decoration: unset !important;
-  display: inline-block;
-}
-
-.blog-card a > p {
-  display: none;
-}
-
-.blog-card-thumbnail {
-  float: left;
-  padding: 10px 10px 0 10px;
-}
-
-.blog-card-thumbnail img {
-  display: block;
-  padding: 0;
-  width: 150px;
-  height: 150px;
-  transition: 0.3s ease-in-out;
-}
-
-.blog-card-content {
-  line-height: 120%;
-}
-
-.blog-card-title {
-  font-size: 16px !important;
-  font-weight: bold;
-  margin-bottom: 0 !important;
-  line-height: 2 !important;
-}
-
-.blog-card-excerpt {
-  font-weight: normal;
-  line-height: 1.5em;
-}
-
-@media screen and (max-width: 768px) {
-  .blog-card {
+  ::before {
+    background-color: #4baaba;
+    color: #fff;
+    content: "合わせて読みたい";
+    font-size: 12px;
+    display: block;
+    padding: 10px 20px;
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    line-height: 1;
+  }
+  a {
+    padding: 20px 0px 10px;
+    text-decoration: unset !important;
+    display: inline-block;
+    > p {
+      display: none;
+    }
+    .blog-card-thumbnail {
+      float: left;
+      padding: 10px 10px 0 10px;
+      img {
+        display: block;
+        padding: 0;
+        width: 150px;
+        height: 150px;
+        transition: 0.3s ease-in-out;
+      }
+    }
+    .blog-card-content {
+      line-height: 120%;
+      .blog-card-title {
+        font-size: 16px !important;
+        font-weight: bold;
+        margin-bottom: 0 !important;
+        line-height: 2 !important;
+      }
+      .blog-card-excerpt {
+        font-weight: normal;
+        line-height: 1.5em;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
     margin-top: 40px;
+    a {
+      display: flex;
+      padding: 0;
+      .blog-card-thumbnail {
+        padding: 30px 10px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .blog-card-content {
+        width: 260%;
+        padding: 30px 10px 20px 0;
+        .blog-card-title {
+          line-height: 1.6 !important;
+          margin-bottom: 8% !important;
+        }
+        .blog-card-excerpt {
+          font-size: 14px;
+          margin: 0;
+        }
+      }
+    }
   }
-  .blog-card a {
-    display: flex;
-    padding: 0;
-  }
-  .blog-card-thumbnail {
-    padding: 30px 10px;
-  }
-  .blog-card-thumbnail img {
-    width: 100%;
-    height: auto;
-  }
-  .blog-card-content {
-    width: 260%;
-    padding: 30px 10px 20px 0;
-  }
-  .blog-card-title {
-    line-height: 1.6 !important;
-    margin-bottom: 8% !important;
-  }
-  .blog-card-excerpt {
-    font-size: 3.4vw;
-    margin: 0;
+}
+
+.blog-card--mb60 {
+  margin-bottom: 60px;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 40px;
   }
 }
