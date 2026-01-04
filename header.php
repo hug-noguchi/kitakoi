@@ -15,10 +15,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <?php $url = $_SERVER['REQUEST_URI']; ?>
   <?php if($url == "/news/" ) { ?>
     記事一覧｜キタコイ
-  <?php } else if ($url == "/category/<?php the_category(); ?>" ){ ?>
-    <?php the_category(); ?>｜キタコイ
-  <?php } else if ($url == "/category/<?php the_title(); ?>" ){ ?>
-    <?php the_title(); ?>｜キタコイ
+  <?php } else if ( is_category() ) { ?>
+    <?php
+      $cat_name = single_cat_title('', false);
+      echo str_replace('・ウェディング', '', $cat_name);
+    ?>の自己負担0円からの結婚式場探し｜キタコイ
   <?php } else if ($url == "/privacy-policy/" ){ ?>
     プライバシーポリシー｜キタコイ
   <?php } else if ($url == "/info/" ){ ?>
@@ -27,17 +28,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     キタコイ
   <?php } ?>
 </title>
-
 <meta name="description" content="『キタ・コイ』は、“北の恋は、本気の恋”をテーマに、
 カップルに向けた北海道の場所やモノ、コト、 美味しい食べ物を紹介するカルチャーコミュニティです。">
 <meta name="keywords" content="キタコイ">
-
 <link rel="SHORTCUT ICON" href="<?php bloginfo('template_url'); ?>/common/images/favicon.ico">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/common/scss/reset.css" media="all">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/common/scss/style.css" media="all">
 <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/common/scss/jquery.fatNav.min.css">
-
 <?php wp_head(); ?>
 </head>
 <body>

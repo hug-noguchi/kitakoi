@@ -11,7 +11,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="format-detection" content="telephone=no">
-<title>キタコイ</title>
+<title>北海道の自己負担0円からの結婚式場探し｜キタコイ</title>
 <meta name="description" content="『キタ・コイ』は、“北の恋は、本気の恋”をテーマに、
 カップルに向けた北海道の場所やモノ、コト、 美味しい食べ物を紹介するカルチャーコミュニティです。">
 <meta name="keywords" content="キタコイ">
