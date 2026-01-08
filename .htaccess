@@ -216,6 +216,7 @@ RewriteRule ^other/murorann-date/$ muroran_wedding/murorann-date/ [L,R=301]
 RewriteRule ^other/centurymarina/$ hakodate_wedding/centurymarina/ [L,R=301]
 RewriteRule ^other/gothicstyle/$ hakodate_wedding/gothicstyle/ [L,R=301]
 RewriteRule ^other/sapporo-misoramen/$ sapporo_wedding/sapporo-misoramen/ [L,R=301]
+RewriteRule ^other/hokkaidou-membershipfee/$ other/hokkaidou-kaihisei/ [L,R=301]
 
 # BEGIN WordPress
 # "BEGIN WordPress" から "END WordPress" までのディレクティブ (行) は
